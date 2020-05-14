@@ -11,10 +11,14 @@ import {
 } from '@material-ui/core';
 import axios from 'axios';
 
+const headers = {
+  'Content-Type': 'application/json'
+}
+
 
 const onSubmit = async values => {
 
-  axios.post('https://uha140ohua.execute-api.us-east-1.amazonaws.com/test/email/', JSON.stringify(values))
+  axios.post('https://dxaxbj4z11.execute-api.us-west-1.amazonaws.com/test/email/', JSON.stringify(values), { headers: headers })
       .then((result) => { window.alert(JSON.stringify(result.data)) },
           (error) => { window.alert(error) }
       );
